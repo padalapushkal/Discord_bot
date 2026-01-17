@@ -1,4 +1,4 @@
-kwee - picker wheel 
-leev - rock paper scisscors and ticktaktoe
+kwee - picker wheel (done)
+leev - rock paper scisscors and ticktaktoe (done)
 akra - bulk weapon/character simulations
-Piri - connect 4, polls, replace NQN bot 
+Piri - connect 4, polls(done), replace NQN bot 
