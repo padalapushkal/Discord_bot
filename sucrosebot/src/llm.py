@@ -12,7 +12,7 @@ OPENROUTER_API_KEY = os.getenv("OPEN_ROUTE_API")
 
 # ❗ Models left EXACTLY as you requested
 MODEL_SLOW = "meta-llama/llama-3.3-70b-instruct:free"
-MODEL_FAST = "meta-llama/llama-3.3-3b-instruct:free"
+MODEL_FAST = "meta-llama/llama-3.3-70b-instruct:free"
 
 HEADERS = {
     "Authorization": f"Bearer {OPENROUTER_API_KEY}",
@@ -65,7 +65,7 @@ async def ask_llm(
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
         ],
-        "max_tokens": 150,
+        "max_tokens": 200,
         "temperature": 0.6,
     }
 

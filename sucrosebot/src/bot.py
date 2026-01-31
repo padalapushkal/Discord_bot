@@ -271,8 +271,8 @@ async def ask(
 
     answer = await ask_llm(question, persona=persona, context=context, fast=fast)
 
-    if len(answer) > 1800:
-        answer = answer[:1800] + "..."
+    # if len(answer) > 1800:
+    #     answer = answer[:1800] + "..."
 
     await interaction.followup.send(f"**Question:** {question}\n**{persona}'s Answer:** {answer}")
 

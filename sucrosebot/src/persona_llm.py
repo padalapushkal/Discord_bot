@@ -26,14 +26,15 @@ async def generate_persona(name: str, context: str) -> str:
         f"Character name: {name}\n"
         f"Context / universe: {context}\n\n"
         "Requirements:\n"
-        "- Clearly identify the character using the given context\n"
-        "- Describe tone, personality, and speech style\n"
+        "- Clearly identify character using given context\n"
+        "- Describe tone, personality, and speech style briefly\n"
         "- Allow answering real-world questions accurately\n"
-        "- Stay in character\n"
+        "- Stay in character but be concise\n"
         "- Do NOT roleplay actions or dialogue\n"
         "- Do NOT invent new lore\n"
         "- Output must be usable as a system prompt\n"
-        "- Keep under 80 words\n"
+        "- Keep under 60 words\n"
+        "- Focus on helpfulness over roleplaying\n"
     )
 
     payload = {
@@ -59,4 +60,4 @@ async def generate_persona(name: str, context: str) -> str:
             persona = data["choices"][0]["message"]["content"].strip()
 
             # Hard safety trim
-            return persona[:800]
+            return persona
